@@ -1,0 +1,15 @@
+# 依赖
+node_modules
+# 构建产物
+dist
+dist-ssr
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+*.local
+# 编辑器 / 系统文件
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.log
