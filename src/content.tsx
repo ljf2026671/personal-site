@@ -9,14 +9,14 @@ export const profile = {
   role: '物联网工程 · 学生',
   tagline: '让传感器、硬件与云端真正互联，做有温度的物联网产品。',
   location: '辽宁 · 辽阳',
-  email: 'hello@example.com',
+  email: 'a13941904534@163.com',
   // 头像：这里是字母 monogram，可替换成图片 URL
   avatarLetter: '刘',
   socials: {
     github: 'https://github.com/ljf2026671',
     gitee: 'https://gitee.com/ljf2026671',
     csdn: 'https://blog.csdn.net/ljf2026671',
-    email: 'mailto:hello@example.com',
+    email: 'mailto:a13941904534@163.com',
   },
 }
 
