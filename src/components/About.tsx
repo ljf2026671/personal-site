@@ -8,7 +8,7 @@ export default function About() {
           01 · 关于我
         </h2>
         <p className="text-slate-400 mb-12 max-w-2xl">
-          一位专注嵌入式与 Web 开发的电子信息工程学生，喜欢从原理出发理解每一个细节，
+          一位专注物联网与嵌入式开发的物联网工程学生，喜欢从原理出发理解每一个细节，
           也喜欢用 AI 把想法快速变成可运行的产品。
         </p>
 
@@ -35,7 +35,7 @@ export default function About() {
               </div>
               <div className="flex justify-between">
                 <span className="text-slate-500">方向</span>
-                <span>嵌入式 / Web / AI</span>
+                <span>物联网 / 嵌入式 / Web / AI</span>
               </div>
             </div>
           </div>

@@ -44,7 +44,7 @@ export default function Contact() {
               <div>
                 <div className="text-sm text-slate-500">GitHub</div>
                 <a href={profile.socials.github} className="text-slate-200 hover:text-cyan-300">
-                  github.com/{'你的用户名'}
+                  github.com/ljf2026671
                 </a>
               </div>
             </div>
