@@ -1,6 +1,8 @@
-import { profile, timeline } from '../content'
+import { useSiteData } from '../context/SiteDataContext'
 
 export default function About() {
+  const { data } = useSiteData()
+  const { profile, timeline } = data
   return (
     <section id="about" className="relative py-24">
       <div className="max-w-6xl mx-auto px-5">

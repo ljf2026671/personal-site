@@ -1,6 +1,8 @@
-import { projects } from '../content'
+import { useSiteData } from '../context/SiteDataContext'
 
 export default function Projects() {
+  const { data } = useSiteData()
+  const projects = data.projects
   return (
     <section id="projects" className="relative py-24">
       <div className="max-w-6xl mx-auto px-5">

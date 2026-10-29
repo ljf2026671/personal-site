@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import CircuitField from './components/CircuitField'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -7,8 +8,22 @@ import Projects from './components/Projects'
 import Blog from './components/Blog'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import AdminApp from './admin/AdminApp'
 
 export default function App() {
+  // 通过 #/admin 进入后台管理，其余 hash 为前台锚点
+  const [isAdmin, setIsAdmin] = useState(() =>
+    window.location.hash.startsWith('#/admin'),
+  )
+
+  useEffect(() => {
+    const onHash = () => setIsAdmin(window.location.hash.startsWith('#/admin'))
+    window.addEventListener('hashchange', onHash)
+    return () => window.removeEventListener('hashchange', onHash)
+  }, [])
+
+  if (isAdmin) return <AdminApp />
+
   return (
     <div className="relative min-h-screen text-slate-100">
       {/* 背景：电路网络粒子 */}

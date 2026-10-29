@@ -1,7 +1,9 @@
 import { useState } from 'react'
-import { posts } from '../content'
+import { useSiteData } from '../context/SiteDataContext'
 
 export default function Blog() {
+  const { data } = useSiteData()
+  const posts = data.posts
   const [active, setActive] = useState<number | null>(null)
 
   return (

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { profile, heroTerminal, stats } from '../content'
+import { heroTerminal } from '../content'
+import { useSiteData } from '../context/SiteDataContext'
 
 /** 打字机效果 */
 function useTypewriter(lines: { prompt: string; out: string }[]) {
@@ -40,6 +41,8 @@ function useTypewriter(lines: { prompt: string; out: string }[]) {
 export default function Hero() {
   const { output } = useTypewriter(heroTerminal)
   const lastPrompt = heroTerminal[heroTerminal.length - 1].prompt
+  const { data } = useSiteData()
+  const { profile, stats } = data
 
   return (
     <section

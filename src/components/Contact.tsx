@@ -1,7 +1,9 @@
 import { useState } from 'react'
-import { profile } from '../content'
+import { useSiteData } from '../context/SiteDataContext'
 
 export default function Contact() {
+  const { data } = useSiteData()
+  const profile = data.profile
   const [form, setForm] = useState({ name: '', email: '', message: '' })
   const [status, setStatus] = useState<'idle' | 'ok' | 'err'>('idle')
 
@@ -44,7 +46,7 @@ export default function Contact() {
               <div>
                 <div className="text-sm text-slate-500">GitHub</div>
                 <a href={profile.socials.github} className="text-slate-200 hover:text-cyan-300">
-                  github.com/ljf2026671
+                  {profile.socials.github.replace('https://', '').replace(/\/$/, '')}
                 </a>
               </div>
             </div>

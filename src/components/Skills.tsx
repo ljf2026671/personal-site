@@ -1,6 +1,8 @@
-import { skillGroups } from '../content'
+import { useSiteData } from '../context/SiteDataContext'
 
 export default function Skills() {
+  const { data } = useSiteData()
+  const skillGroups = data.skillGroups
   return (
     <section id="skills" className="relative py-24 bg-[#070a13]/60">
       <div className="max-w-6xl mx-auto px-5">
